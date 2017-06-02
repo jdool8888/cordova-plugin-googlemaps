@@ -45,13 +45,15 @@
             </feature>
         </config-file>
         
-        <!--
+        
         <framework src="com.google.android.gms:play-services-maps:+" />
         <framework src="com.google.android.gms:play-services-location:+" />
-        -->
+      
         
+        <!--
         <framework src="com.google.android.gms:play-services-maps:10.+" />
         <framework src="com.google.android.gms:play-services-location:10.+" />
+-->
         
 
         <!-- plugin src files -->
