@@ -373,8 +373,6 @@ App.prototype.getMap = function(div, params) {
         self.set("keepWatching", true);
         var className;
         
-        alert("at here");
-        
         while (div.parentNode) {
             div.style.backgroundColor = 'rgba(0,0,0,0)';
             className = div.className;
@@ -388,8 +386,15 @@ App.prototype.getMap = function(div, params) {
 
             div = div.parentNode;
         }
+        
     }
+     
+    alert("at here");
+    
     cordova.exec(function() {
+        
+        alert("at there");
+        
         setTimeout(function() {
             self.refreshLayout();
             self.trigger(plugin.google.maps.event.MAP_READY, self);
