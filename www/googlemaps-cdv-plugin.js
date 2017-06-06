@@ -387,12 +387,11 @@ App.prototype.getMap = function(div, params) {
             div = div.parentNode;
         }
         
-    }
-    
+    }   
     cordova.exec(function() {       
         setTimeout(function() {
             self.refreshLayout();
-            //self.trigger(plugin.google.maps.event.MAP_READY, self);
+            self.trigger(plugin.google.maps.event.MAP_READY, self);
         }, 100);
     }, self.errorHandler, PLUGIN_NAME, 'getMap', self.deleteFromObject(args,'function'));
     return self;
