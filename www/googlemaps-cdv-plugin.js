@@ -388,19 +388,16 @@ App.prototype.getMap = function(div, params) {
         }
         
     }
-     
-    alert("at here");
     
-    cordova.exec(function() {
-        
-        alert("at there");
-        
+    cordova.exec(function() {       
         setTimeout(function() {
             self.refreshLayout();
             self.trigger(plugin.google.maps.event.MAP_READY, self);
+            return self;
         }, 100);
     }, self.errorHandler, PLUGIN_NAME, 'getMap', self.deleteFromObject(args,'function'));
     //return self;
+    
 };
 
 
