@@ -373,7 +373,7 @@ App.prototype.getMap = function(div, params) {
         self.set("keepWatching", true);
         var className;
         while (div.parentNode) {
-            div.style.backgroundColor = 'rgba(0,0,0,0)';
+            //div.style.backgroundColor = 'rgba(0,0,0,0)';
             className = div.className;
 
             // prevent multiple readding the class
@@ -390,7 +390,7 @@ App.prototype.getMap = function(div, params) {
         setTimeout(function() {
             self.refreshLayout();
             self.trigger(plugin.google.maps.event.MAP_READY, self);
-        }, 10000);
+        }, 100);
     }, self.errorHandler, PLUGIN_NAME, 'getMap', self.deleteFromObject(args,'function'));
     return self;
 };
