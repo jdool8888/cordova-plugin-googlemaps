@@ -372,8 +372,11 @@ App.prototype.getMap = function(div, params) {
 
         self.set("keepWatching", true);
         var className;
+        
+        alert("at here");
+        
         while (div.parentNode) {
-            //div.style.backgroundColor = 'rgba(0,0,0,0)';
+            div.style.backgroundColor = 'rgba(0,0,0,0)';
             className = div.className;
 
             // prevent multiple readding the class
