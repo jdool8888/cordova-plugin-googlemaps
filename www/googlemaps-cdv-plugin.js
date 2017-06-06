@@ -388,9 +388,9 @@ App.prototype.getMap = function(div, params) {
     }
     cordova.exec(function() {
         setTimeout(function() {
-            //self.refreshLayout();
+            self.refreshLayout();
             self.trigger(plugin.google.maps.event.MAP_READY, self);
-        }, 100);
+        }, 10000);
     }, self.errorHandler, PLUGIN_NAME, 'getMap', self.deleteFromObject(args,'function'));
     return self;
 };
